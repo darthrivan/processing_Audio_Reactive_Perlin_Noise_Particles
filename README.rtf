@@ -1,67 +1,45 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1265
-{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fmodern\fcharset0 Courier-Oblique;}
-{\colortbl;\red255\green255\blue255;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\sl300
+Copyright (C) 2015  DarthRivan
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License".
 
-\f0\fs24 \cf0 Copyright (C) 2015  DarthRivan\
-    Permission is granted to copy, distribute and/or modify this document\
-    under the terms of the GNU Free Documentation License, Version 1.3\
-    or any later version published by the Free Software Foundation;\
-    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.\
-    A copy of the license is included in the section entitled "GNU\
-    Free Documentation License".\
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
-\cf0 \
-\
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
-\cf0 \ul \ulc0 Audio Reactive Perlin Noise Particles    by DarthRivan\
-\ulnone \
-This is an audio reactive project done with Processing where Perlin Noise driven particles are generated depending on the sound of the L/R channels of the audio input (microphone).\
-\
-Particle movement was extracted from another project, 
-\f1\i Daan van Hasselt
-\f0\i0 \'92s \'93Perlin Noise Particle System\'94 which can be found here {\field{\*\fldinst{HYPERLINK "http://www.openprocessing.org/sketch/10475"}}{\fldrslt http://www.openprocessing.org/sketch/10475}}\
-\
-I quote from the sketch description:\
-\
-\'93Using Perlin noise to determine speed and direction of particles. Time is the third dimension of the noise() function, so if you keep your mouse at the same point the direction of the particles will always be different. The particles leave a trace, and the result is a bit like ink in water.\'94\
-\
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
-\cf0 Tested under 
-\f1\i Hackintosh 10.9 
-\f0\i0 and
-\f1\i  Processing 2.0
-\f0\i0  using (as you can see in the code, Line In audio (microphone).
-\f1\i \
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
 
-\f0\i0 \cf0 \
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
-\cf0 I\'92ve tested the code using music by ASound Project ({\field{\*\fldinst{HYPERLINK "http://asound.me/"}}{\fldrslt http://asound.me/}}) and Ad\'b7ver\'b7sary ({\field{\*\fldinst{HYPERLINK "http://ad-ver-sary.com/"}}{\fldrslt http://ad-ver-sary.com/}}) as well as some songs in the Emerging Organisms compilations by Tympanik Audio.\
-\
-To modify some behaviours you can use:\
-\
-**Variables (found in Globals.cpp):\
-\
-\pard\tx529\pardeftab529\pardirnatural
-\cf0 \CocoaLigature0 MAX_PARTICLES: Maximum number of Particles\
-\
-precisionL and precisionR: Precision for both Channels. For R Channel it will ignore values between precisionR and -precisionR, and the same for L Channel. Precision value >= 1.5 is highly imposible to feel anything\
-    \
-LifeTime: Lifetime for every Particle in the System\
-    \
-    \
-ParticleAlpha: Particle\'92s Transparency where 0 is fully transparent and 255 is fully opaque\
-    \
-ParSpeedRedFactor: Particle\'92s Speed reducing Factor from 1.1 to whatever to go from more speed to less speed.\CocoaLigature1 \
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural
-\cf0 \
-**Controls:\
-\
-R key: resets the particles zone.\
-\
-L key: enables/disables the sound lines at both edges of the screen.\
-\
-This, openFrameworks version and other sketches and projects can be found on my gitHub ( https://github.com/darthrivan ).}
+Audio Reactive Perlin Noise Particles    by DarthRivan
+
+This is an audio reactive project done with Processing where Perlin Noise driven particles are generated depending on the sound of the L/R channels of the audio input (microphone).
+
+Particle movement was extracted from another project, Daan van Hasselt’s “Perlin Noise Particle System” which can be found here http://www.openprocessing.org/sketch/10475
+
+I quote from the sketch description:
+
+“Using Perlin noise to determine speed and direction of particles. Time is the third dimension of the noise() function, so if you keep your mouse at the same point the direction of the particles will always be different. The particles leave a trace, and the result is a bit like ink in water.”
+
+Tested under Hackintosh 10.9 and Processing 2.0 using (as you can see in the code, Line In audio (microphone).
+
+I’ve tested the code using music by ASound Project (http://asound.me/) and Ad·ver·sary (http://ad-ver-sary.com/) as well as some songs in the Emerging Organisms compilations by Tympanik Audio.
+
+To modify some behaviours you can use:
+
+**Variables (found in Globals.cpp):
+
+MAX_PARTICLES: Maximum number of Particles
+
+precisionL and precisionR: Precision for both Channels. For R Channel it will ignore values between precisionR and -precisionR, and the same for L Channel. Precision value >= 1.5 is highly imposible to feel anything
+    
+LifeTime: Lifetime for every Particle in the System
+    
+    
+ParticleAlpha: Particle’s Transparency where 0 is fully transparent and 255 is fully opaque
+    
+ParSpeedRedFactor: Particle’s Speed reducing Factor from 1.1 to whatever to go from more speed to less speed.
+
+**Controls:
+
+R key: resets the particles zone.
+
+L key: enables/disables the sound lines at both edges of the screen.
+
+This, openFrameworks version and other sketches and projects can be found on my gitHub ( https://github.com/darthrivan ).
